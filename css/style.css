@@ -1,0 +1,511 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+:root {
+  --primary-color: darkviolet;
+  --primary-grad-color: linear-gradient(to left, darkviolet, deepskyblue);
+  --secondary-color: darkblue;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+/* start header  */
+/* start header intro  */
+header {
+  height: 80vh;
+  background: var(--primary-grad-color);
+  position: relative;
+}
+.headerintros {
+  background-color: var(--primary-color);
+  color: #fff;
+  display: none;
+  padding: 15px 0;
+}
+.infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+@media (min-width: 1200px) {
+  .visiblelgs {
+    display: block;
+  }
+}
+.headericons a {
+  color: #fff;
+  margin: 0 10px;
+}
+/* end header intro  */
+
+/* start nav  */
+.menustyles li a {
+  color: #000;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  transition: color 0.5s;
+}
+.menustyles li a:hover {
+  color: var(--primary-color);
+}
+.lines1,
+.lines2,
+.lines3 {
+  width: 17px;
+  height: 2px;
+  margin: 4px;
+}
+.crossx .lines1 {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.crossx .lines2 {
+  opacity: 0;
+}
+.crossx .lines3 {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+.navbuttons {
+  border: none;
+}
+.navbuttons:focus {
+  box-shadow: none;
+}
+nav {
+  position: relative;
+  z-index: 1;
+}
+/* end nav  */
+
+/* start banner  */
+.banners {
+  width: 90%;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.bannerheaders {
+  font-weight: bold;
+  letter-spacing: 3px;
+  animation-name: bananis;
+  animation-duration: 2s;
+}
+.bannerparas {
+  animation-name: bananis;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+.banner-btn {
+}
+@keyframes bananis {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* end banner  */
+
+.studentgroups {
+  width: 45%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  /* display: none; */
+}
+.waves {
+  width: 100%;
+
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+
+  z-index: 2;
+}
+/* end header  */
+
+/* Start student counter section  */
+.counters {
+  width: 100%;
+  height: 20vh;
+  font-weight: bold;
+  letter-spacing: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counteritems {
+  width: 25%;
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+
+  text-align: center;
+  float: left;
+}
+
+.counteritems:last-child {
+  border-right: none;
+}
+.counteritems .fas {
+  background: var(--primary-grad-color);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.counteritems h5 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* End Student Counter Section  */
+
+/* Start About Us Section  */
+.aboutuss {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../assests/img/banner/banner4.jpg);
+  background-repeat: no-repeat;
+}
+.aboutuss ul li {
+  list-style: none;
+  background-color: var(--secondary-color);
+  margin: 20px;
+}
+/* End About US SEction  */
+
+/* Start Faculty  */
+.faculties {
+  background-color: var(--secondary-color);
+}
+.flip-cards {
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+.flip-card-inners {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.5);
+  transform: rotateY(-45deg) scale(0.7);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+.flip-cards:hover .flip-card-inners {
+  transform: rotateY(180deg);
+}
+.flip-card-fronts,
+.flip-card-backs {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  --webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-backs {
+  background-color: steelblue;
+  transform: rotateY(180deg);
+}
+.socialicons a {
+  color: #fff;
+  border: 1px solid #f4f4f4;
+  padding: 5px;
+  margin: 0 5px;
+}
+.socialicons a:hover {
+  background-color: blue;
+}
+/* End Faculty  */
+
+/* Start Pricing Section  */
+.pricingboxes {
+  background-color: #eee;
+  text-align: center;
+
+  transition: transform 0.3s;
+}
+.price-headers {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding-left: 10px 0;
+}
+.prices {
+  font-size: 3rem;
+  font-weight: bold;
+  background: url(../assests/img/icon/pricebg.png);
+  background-repeat: no-repeat;
+  line-height: 160px;
+  background-position: center;
+}
+.price-items ul li {
+  margin: 10px 0;
+} /* End Pricing Section  */
+.pricingboxes:hover {
+  transform: translateY(-20px);
+}
+
+/* Start location area section  */
+.libcards {
+  perspective: 1000px;
+  position: relative;
+  /* overflow: hidden; */
+}
+.libcontents {
+  width: 0%;
+  height: 100%;
+  color: #fff;
+  background-color: #444;
+  padding: 0 10px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: rotateY(-90deg);
+  transform-origin: left center;
+
+  transition: all 0.5s;
+}
+.libcards:hover .libcontents {
+  width: 70%;
+  transform: rotateY(0deg);
+}
+.btn-infos {
+  width: 50%;
+  background-color: steelblue;
+  color: #fff;
+  text-align: center;
+
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  transition: background-color 0.3s;
+}
+.btn-infos:hover {
+  background-color: var(--secondary-color);
+}
+/* End location area section  */
+
+/* Start feature section  */
+.features {
+  background-color: var(--secondary-color);
+}
+.feas img {
+  transform: rotateY(0) scale(0.5);
+  transition: transform 0.5s;
+}
+.feas:hover img {
+  transform: rotateY(1turn) scale(1);
+}
+.feas p {
+  font-size: 12px;
+}
+/* End Feature section  */
+
+/* Start rating section  */
+.headings {
+  font-size: 25px;
+  margin-right: 25px;
+}
+.fa-star {
+  font-size: 25px;
+}
+.fills {
+  color: orange;
+}
+.rows {
+  display: flex;
+}
+.lefts {
+  width: 20%;
+  margin-bottom: 10px;
+}
+.middles {
+  width: 60%;
+}
+.rights {
+  width: 20%;
+  text-align: right;
+}
+.bars-container {
+  width: 100%;
+  background-color: #f1f1f1;
+}
+.bars-1 {
+  width: 60%;
+  height: 18px;
+  background-color: green;
+}
+.bars-2 {
+  width: 30%;
+  height: 18px;
+  background-color: blue;
+}
+.bars-3 {
+  width: 10%;
+  height: 18px;
+  background-color: skyblue;
+}
+.bars-4 {
+  width: 5%;
+  height: 18px;
+  background-color: orange;
+}
+.bars-5 {
+  width: 15%;
+  height: 18px;
+  background-color: red;
+}
+/* End rating section  */
+
+/* Start Subscribe section  */
+.subscribes {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url(../assests/img/etc/student1.png);
+  background-repeat: no-repeat;
+  background-position: 80%;
+}
+@media (max-width: 992px) {
+  .subscribes {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
+  }
+}
+@media (max-width: 992px) {
+  .subscribes {
+    background-position: 90%;
+  }
+}
+.input-group-text {
+  background-color: royalblue;
+  color: #fff;
+}
+.squareares {
+  position: relative;
+  overflow: hidden;
+}
+.sqboxes {
+  width: 100%;
+  height: 100%;
+}
+.square {
+  width: 70px;
+  height: 70px;
+  background-color: #f2f2f2;
+
+  position: absolute;
+  left: 0;
+  bottom: -35%;
+
+  animation: sqani 3s infinite ease-in-out;
+}
+
+@keyframes sqani {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 100%;
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+}
+.square:nth-child(1) {
+  width: 70px;
+  height: 70px;
+  left: 7%;
+}
+.square:nth-child(2) {
+  width: 65px;
+  height: 65px;
+  left: 15%;
+  animation-delay: 4s;
+}
+.square:nth-child(3) {
+  width: 82px;
+  height: 82px;
+  left: 45%;
+  animation-delay: 8s;
+}
+.square:nth-child(4) {
+  width: 70px;
+  height: 70px;
+  left: 55%;
+  animation-delay: 2s;
+}
+.square:nth-child(5) {
+  width: 60px;
+  height: 60px;
+  left: 67%;
+  animation-delay: 6s;
+}
+.square:nth-child(6) {
+  width: 55px;
+  height: 55px;
+  left: 72%;
+  animation-delay: 4s;
+}
+.square:nth-child(7) {
+  width: 90px;
+  height: 90px;
+  left: 85%;
+  animation-delay: 9s;
+}
+.square:nth-child(8) {
+  width: 70px;
+  height: 70px;
+  left: 75%;
+  animation-delay: 4s;
+}
+.square:nth-child(9) {
+  width: 45px;
+  height: 45px;
+  left: 10%;
+  animation-delay: 4s;
+}
+.square:nth-child(10) {
+  width: 55px;
+  height: 55px;
+  left: 63%;
+  animation-delay: 2s;
+}
+/* End Subscribe section */
+
+/* Start Footer section  */
+.footerlinks {
+  color: #eee;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.footerlinks:hover {
+  color: orange;
+  border-bottom: 1px solid orange;
+  letter-spacing: 1px;
+}
+.footersocialicons a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #f4f4f4;
+  border-radius: 50%;
+  color: #fff;
+  margin: 0 2px;
+  text-align: center;
+  line-height: 30px;
+}
+.footersocialicons a:hover {
+  background-color: blue;
+}
+/* End Footer section  */
